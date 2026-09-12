@@ -245,13 +245,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .portrait{
   aspect-ratio:3/3.6;border-radius:var(--radius);overflow:hidden;position:relative;
   border:1px solid var(--line);background:var(--bg-elev);
-  display:flex;align-items:center;justify-content:center;
 }
-.portrait .initials{font-size:4rem;font-weight:800;color:var(--gold);opacity:.5}
-.portrait .frame-note{
-  position:absolute;bottom:14px;right:14px;left:14px;
-  font-size:.75rem;color:var(--text-faint);background:rgba(6,6,6,.6);
-  border:1px dashed var(--line);border-radius:8px;padding:8px 10px;text-align:center;
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.portrait::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg, rgba(6,6,6,0) 60%, rgba(6,6,6,.55) 100%);
+  border:1px solid var(--gold-dim);border-radius:var(--radius);
 }
 .about-bio p{color:var(--text-dim);margin-bottom:18px;font-size:1.02rem}
 .about-bio p:first-child{color:var(--text);font-size:1.12rem}
@@ -511,8 +510,7 @@ footer .foot-gold{color:var(--gold);font-size:.8rem}
       <div class="about-grid">
         <div class="portrait-wrap" data-reveal>
           <div class="portrait">
-            <span class="initials">ج.ا</span>
-            <div class="frame-note">محل قرارگیری تصویر پرتره حرفه‌ای جواد امیری</div>
+            <img src="assets/javad-amiri-portrait.jpg" alt="جواد امیری — مدرس و فعال حوزه هوش مصنوعی" loading="lazy" width="1086" height="1448">
           </div>
         </div>
         <div class="about-bio" data-reveal data-reveal-delay="1">
